@@ -11,5 +11,6 @@ if [ -f $FILENAME ]; then
                 echo '_RESET=$(tput sgr0)'>> $FILENAME
                 echo '_BOLD=$(tput bold)'>> $FILENAME
                 echo 'export PS1="[${_RED}\u${_CYAN}@${_BLUE}\h${_MAGENTA} \W${_RESET}]${_BOLD}#${_RESET}"'>> $FILENAME
+	        echo 'export GPG_TTY=$(tty)'>> $FILENAME
 	fi
 fi
