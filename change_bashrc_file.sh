@@ -10,7 +10,7 @@ if [ -f $FILENAME ]; then
                 echo '_CYAN=$(tput setaf 6)'>> $FILENAME
                 echo '_RESET=$(tput sgr0)'>> $FILENAME
                 echo '_BOLD=$(tput bold)'>> $FILENAME
-                echo 'export PS1="[${_RED}\u${_CYAN}@${_BLUE}\h${_MAGENTA} \W${_RESET}]${_BOLD}#${_RESET}"'>> $FILENAME
+                echo 'export PS1="\[${_RED}\]\u\[${_CYAN}\]@\[${_BLUE}\]\h \[${_MAGENTA}\]\w \[${_RESET}\]# "'>> $FILENAME
 	        echo 'export GPG_TTY=$(tty)'>> $FILENAME
 	fi
 fi
