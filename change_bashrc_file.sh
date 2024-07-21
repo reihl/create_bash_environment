@@ -12,5 +12,7 @@ if [ -f $FILENAME ]; then
                 echo '_BOLD=$(tput bold)'>> $FILENAME
                 echo 'export PS1="\[${_RED}\]\u\[${_CYAN}\]@\[${_BLUE}\]\h \[${_MAGENTA}\]\w \[${_RESET}\]# "'>> $FILENAME
 	        echo 'export GPG_TTY=$(tty)'>> $FILENAME
+		echo 'eval $(ssh-agent)'>> $FILENAME
+		echo 'ssh-add'>> $FILENAME
 	fi
 fi
